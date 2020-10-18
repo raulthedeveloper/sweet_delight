@@ -1,0 +1,39 @@
+$primary: #CF9DB5;
+$primary-text:white;
+$secondary-text:#707070;
+
+
+@mixin breakpoints(){
+    @media screen {
+        
+    }
+}
+
+@mixin theme-button($m-top,$center) {
+    background-color: $red;
+    color: $primary-text;
+    border: solid $primary-text;
+    width:200px;
+    padding: 10px;
+    margin: $center;
+    display: block;
+    margin-top: $m-top;
+
+    &:hover{
+        background-color:adjust-hue( $red, 10);
+    }
+}
+
+
+@mixin paragraph($color) {
+    font-size: 1.5rem;
+    color: $color;
+    line-height: 2;
+}
+
+@mixin header_2($color) {
+    font-size: 2.5rem;
+    margin-bottom:4rem;
+    color: $color;
+    text-align: center;
+}

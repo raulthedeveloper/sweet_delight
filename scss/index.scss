@@ -1,0 +1,167 @@
+@import "mixins";
+
+
+
+
+$red: #EB5858;
+
+
+
+
+section{
+    padding:4rem;
+}
+
+.navbar{
+    padding: 0;
+    padding-top: 1rem;
+    button{
+        @include theme-button(0,initial);
+
+    }
+}
+
+.hero{
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../imgs/bakery.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:40rem;
+
+    h1{
+        color: $primary-text;
+        font-size: 4rem;
+        font-weight: 400;
+    }
+
+    button{
+        @include theme-button(1rem,initial);
+
+    }
+    .col{
+        margin-top: 10rem;
+    }
+}
+
+
+#selection{
+    background-color:#E5E5E5;
+    img{
+        width: 90%;
+        height: 300px;
+        margin: auto;
+        display: block;
+        
+
+        &:hover{
+            filter: drop-shadow(0 0 0.75rem $red);
+        }
+    }
+    h2{
+        color:$secondary-text;
+        @include header_2($secondary-text)
+    }
+
+    h3{
+        text-align: center;
+        color:$secondary-text;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+#about{
+    background: $primary;
+
+    h2{
+        color: $primary-text;
+        @include header_2($primary-text)
+    }
+    button{
+       @include theme-button(4rem,auto);
+    }
+    p{
+
+        @include paragraph(darken($primary-text, 20%));
+    }
+}
+
+#catering{
+    background-image: url('../imgs/wood_texture.webp');
+    h2{
+        @include header_2($primary-text)
+         
+    }
+    p{
+
+        @include paragraph(darken($primary-text, 50%));
+    }
+
+    img{
+        width: 60%;
+        height: 500px;
+    }
+    img:nth-child(2){
+        width: 45%;
+        height: 500px;
+        z-index: 3;
+        position: relative;
+        bottom: 27rem;
+        left: 16rem;
+    }
+
+    .col-md-6{
+        height: 34rem;
+    }
+
+    button{
+        @include theme-button(4rem,auto);
+
+    }
+}
+
+#contact{
+    background-color: $primary;
+    h2{
+        @include header_2($primary-text);
+        margin-bottom:2rem;
+         
+    }
+
+    h3{
+        font-weight: 400;
+    }
+
+    p{
+
+        @include paragraph(darken($primary-text, 10%));
+        line-height: 1;
+    }
+
+    @include header_2($primary-text);
+
+    form{
+        label{
+            font-size: 1.5rem;
+            text-align: left;
+        }
+        button{
+            @include theme-button(3rem,initial);
+    
+        }
+    }
+    text-align: left;
+
+    .col-md-6:nth-child(2){
+        padding-top: 6rem;
+        padding-left: 2rem;
+
+        div:nth-child(2){
+            padding-top: 2.5rem;
+        }
+    }
+
+}
